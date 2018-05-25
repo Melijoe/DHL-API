@@ -100,7 +100,7 @@ abstract class Base extends BaseDataType
      * @var boolean
      * Render the schema version or not
      */
-    protected $_displaySchemaVersion = false;
+    protected $_displaySchemaVersion = true;
 
     /**
      * Parent node name of the object 
