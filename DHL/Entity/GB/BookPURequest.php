@@ -46,7 +46,8 @@ class BookPURequest extends Base
      * @var string
      * Service XSD
      */
-    protected $_serviceXSD = 'BookPURequest.xsd';
+    //protected $_serviceXSD = 'BookPURequest.xsd';
+    protected $_serviceXSD = 'book-pickup-global-req.xsd';
 
     /**
      * Parameters to be send in the body
@@ -63,9 +64,9 @@ class BookPURequest extends Base
             'enumeration' => 'AP,EU,AM',
         ), 
         'Requestor' => array(
-            'type' => 'string',
+            'type' => 'Requestor',
             'required' => false,
-            'subobject' => false,
+            'subobject' => true,
         ), 
         'Place' => array(
             'type' => 'Place',
@@ -73,14 +74,14 @@ class BookPURequest extends Base
             'subobject' => true,
         ), 
         'Pickup' => array(
-            'type' => 'string',
+            'type' => 'Pickup',
             'required' => false,
-            'subobject' => false,
+            'subobject' => true,
         ), 
         'PickupContact' => array(
-            'type' => 'string',
+            'type' => 'PickupContact',
             'required' => false,
-            'subobject' => false,
+            'subobject' => true,
         ), 
         'ShipmentDetails' => array(
             'type' => 'ShipmentDetails',
